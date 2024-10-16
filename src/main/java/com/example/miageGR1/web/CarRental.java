@@ -18,6 +18,8 @@ public class CarRental {
     public CarRental() {
         cars.add(new Car("11AA22", 1000));
         cars.add(new Car("22BB33", 2000));
+        cars.add(new Car("33CC44", 3000));
+        cars.add(new Car("44DD55", 4000));
     }
 
     @GetMapping("/cars")
@@ -26,6 +28,8 @@ public class CarRental {
     public List<Car> listOfCars(){
         return cars;
     }
+
+    
 
     @PutMapping(value = "/cars/{plateNumber}")
     @ResponseStatus(HttpStatus.OK)
